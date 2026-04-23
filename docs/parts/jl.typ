@@ -1,3 +1,7 @@
+#import "../common.typ": *
+= Julia Codes
+---
+
 == Introduction
 
 Julia is a high-level, high-performance programming language designed for numerical and scientific computing. While it is often associated with workstations and servers, Julia runs well on ARM-based hardware including the Raspberry Pi. This makes it an attractive choice for edge computing, data logging, sensor fusion, and lightweight network services running directly on embedded Linux systems.
@@ -40,7 +44,10 @@ Verify the installation:
 julia --version
 ```
 
-`juliaup` allows you to maintain multiple Julia versions and switch between them with `juliaup default <version>`.
+`juliaup` allows you to maintain multiple Julia versions and switch between them with 
+```bash
+juliaup default <version>
+```
 
 ==== Alternative: System Package
 
@@ -53,6 +60,8 @@ sudo apt install julia
 === First Launch and the REPL
 
 Start Julia by typing `julia` in the terminal. You will be greeted by the interactive REPL (Read-Eval-Print Loop). From here you can enter expressions, manage packages, and run scripts.
+
+---
 
 Julia has four REPL modes:
 

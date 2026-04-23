@@ -1,5 +1,5 @@
 src := "main.typ"
-out := "RPi-onramp.pdf"
+out := "RPi-Onramp.pdf"
 
 build:
     typst compile {{ src }} {{ out }}
