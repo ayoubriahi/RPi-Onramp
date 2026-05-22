@@ -44,6 +44,8 @@ Verify the installation:
 julia --version
 ```
 
+---
+
 `juliaup` allows you to maintain multiple Julia versions and switch between them with 
 ```bash
 juliaup default <version>
@@ -57,11 +59,11 @@ If you prefer a simpler path without `juliaup`, the Raspberry Pi OS repositories
 sudo apt install julia
 ```
 
+---
+
 === First Launch and the REPL
 
 Start Julia by typing `julia` in the terminal. You will be greeted by the interactive REPL (Read-Eval-Print Loop). From here you can enter expressions, manage packages, and run scripts.
-
----
 
 Julia has four REPL modes:
 
@@ -70,10 +72,12 @@ Julia has four REPL modes:
 / Help mode _(press `?`)_: display documentation for any symbol.
 / Shell mode _(press `;`)_: run shell commands without leaving Julia.
 
+---
+
 To install a package, enter package mode and type:
 
 ```
-] add SerialPorts
+] add Plots
 ```
 
 To exit the REPL:
@@ -81,6 +85,8 @@ To exit the REPL:
 ```julia
 exit()
 ```
+
+---
 
 === Package Depot and Precompilation
 

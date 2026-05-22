@@ -12,6 +12,27 @@
 #show link:underline
 #set par(justify: true)
 
+// Define font variables
+#let font-heading = "Molengo"
+#let font-body = "Molengo"
+#let font-code = "Fira Code"
+
+#set text(
+  font: font-body,
+  size: 22pt,  // Larger size optimal for slides
+  fill: rgb("#1a1a1a"),  // Soft black for better readability
+)
+
+// Configure heading styles
+#show heading: set text(font: font-heading, weight: "bold", fill: rgb("#0f4c81"))
+
+// Configure Programming/Code block styles
+#show raw: set text(
+  font: font-code,
+  stylistic-set: 1,  // Enables specific font ligatures if supported
+)
+
+
 #show: metropolis-theme.with(
   aspect-ratio: "16-9",
   footer: self => "RPi Onramp | A. Mhamdi",

@@ -1,6 +1,10 @@
+#import "../common.typ": *
 = Basic circuitry
+---
 
 == UART
+
+UART stands for Universal Asynchronous Receiver Transmitter.
 
 == Analog inputs-outputs
 

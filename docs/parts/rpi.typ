@@ -2,13 +2,13 @@
 = General Overview
 ---
 
-#hl[*Why Use Raspberry Pi*]
+#hl[#text(weight: "bold")[Why Use Raspberry Pi]]
 
 Raspberry Pi is a popular choice for beginners because it is affordable, well-documented, and has a large community. It ships with a familiar Debian-based environment, making it easy to get started with Linux. It is equally suited for advanced users who want to build custom hardware projects, run home servers, or experiment with electronics via its 40-pin GPIO header.
 
 ---
 
-#hl[*What is Raspberry Pi*]
+#hl[#text(weight: "bold")[What is Raspberry Pi]]
 
 Raspberry Pi is a *low-cost* operating systems. It is a popular platform for single-board computer _capable of running_ Linux-based embedded systems, IoT projects, home automation, education, and prototyping. It was originally developed by the Raspberry Pi Foundation (now Raspberry Pi Ltd.) with the goal of promoting computer science education.
 
@@ -78,6 +78,8 @@ ssh <username>@<hostname>.local
   ```
 ]
 
+---
+
 === SSH Key Authentication
 
 Connecting with a password is convenient but less secure. The recommended approach is *public-key authentication*: you generate a key pair on your client machine, then place the public key on the Raspberry Pi. From that point on, no password is needed and brute-force attacks become ineffective.
@@ -113,17 +115,19 @@ The command produces two files:
 The simplest method is `ssh-copy-id`, which handles directory creation and permissions automatically:
 ```bash
 ssh-copy-id <username>@<pi-ip-address>
-# e.g. ssh-copy-id pi@192.168.1.123
+# e.g. ssh-copy-id pi@10.42.0.39
 ```
 
 You will be asked for your Pi password one final time. After this step, the public key is appended to `~/.ssh/authorized_keys` on the Pi.
 
+/*
 If `ssh-copy-id` is not available _(e.g. on Windows)_, copy it manually:
 ```bash
 cat ~/.ssh/rpi.pub | ssh <username>@<pi-ip-address> \
   "mkdir -p ~/.ssh && chmod 700 ~/.ssh && \
    cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 ```
+*/
 
 === Connect using the key
 ```bash
@@ -151,12 +155,12 @@ Find and set the following lines _(restart the ssh service afterwards)_:
 PasswordAuthentication no
 PubkeyAuthentication yes
 ```
-/*
 Then restart the SSH service:
 ```bash
 sudo systemctl restart ssh
 ```
-*/
+
+---
 
 #warning[Do not disable password login until you have verified that key
   authentication works in a separate terminal session. Locking yourself out
@@ -173,6 +177,8 @@ To install Git:
 sudo apt install git
 ```
 
+---
+
 Basic initial configuration:
 ```bash
 git config --global user.name  "Your Name"
@@ -181,8 +187,10 @@ git config --global user.email "you@example.com"
 
 To clone an existing repository from GitHub:
 ```bash
-git clone https://github.com/<user>/<repo>.git
+git clone https://github.com/a-mhamdi/rpi-onramp.git
 ```
+
+---
 
 *Using a key with GitHub*
 
@@ -204,6 +212,8 @@ To switch an existing local repository from HTTPS to SSH:
 ```bash
 git remote set-url origin git@github.com:<user>/<repo>.git
 ```
+
+---
 
 *Lazygit*
 

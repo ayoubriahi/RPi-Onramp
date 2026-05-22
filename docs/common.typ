@@ -48,17 +48,17 @@
       fill: accent,
       inset: (x: 10pt, y: 12pt),
     )[
-      #set text(fill: white, size: 14pt)
+      #set text(fill: white, size: 12pt)
       #_icons.at(kind)
     ],
     // right content
     block(
       inset: (x: 16pt, y: 12pt),
     )[
-      #set text(fill: accent.darken(30%), size: 9pt, weight: "bold")
+      #set text(fill: accent.darken(30%), weight: "bold")
       #upper(kind)
       #v(4pt)
-      #set text(fill: luma(40), weight: "regular", size: 10.5pt)
+      #set text(fill: luma(40), weight: "regular")
       #body
     ],
   )
