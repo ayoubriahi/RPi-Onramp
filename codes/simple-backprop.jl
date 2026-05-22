@@ -14,11 +14,11 @@ end
 model = Neuron()
 
 #= avoided thanks to `functor`
-# function predict(ann::ANN, x::Float64)
-    return ann.w * x + ann.b
+# function predict(m::Neuron, x::Float64)
+    return m.w * x + m.b
 end
 
-predict(ann, 5.) |> println
+predict(model, 5.) |> println
 =#
 
 model(-5.) |> println
