@@ -1,18 +1,22 @@
 #import "../common.typ": *
+
 = Julia Codes
+
 ---
 
-== Introduction
+Julia is a high-level, high-performance programming language designed for numerical and scientific computing. While it is often associated with workstations and servers, Julia runs well on ARM-based hardware including the *Raspberry Pi*. This makes it an attractive choice for edge computing, data logging, sensor fusion, and lightweight network services running directly on embedded Linux systems.
 
-Julia is a high-level, high-performance programming language designed for numerical and scientific computing. While it is often associated with workstations and servers, Julia runs well on ARM-based hardware including the Raspberry Pi. This makes it an attractive choice for edge computing, data logging, sensor fusion, and lightweight network services running directly on embedded Linux systems.
-
-This document covers how to install Julia on a Raspberry Pi, how to manage GPIO and serial connections, how to use Julia's networking stack, and how to write practical programs that tie these capabilities together.
+This document covers how to install Julia on a *Raspberry Pi*, how to manage GPIO and serial connections, how to use Julia's networking stack, and how to write practical programs that tie these capabilities together.
 
 == Initial Setup
+
+#title-slide("Getting Started with Julia on Raspberry Pi", "Installation and First Steps")
 
 === Hardware Requirements
 
 Julia can run on any Raspberry Pi model that supports a 64-bit ARM operating system, starting from the Raspberry Pi 3. The Raspberry Pi 4 or 5 is recommended for interactive use and package compilation due to its faster CPU and larger RAM. A microSD card of at least 16 GB is advisable, as Julia's package depot and precompiled artifacts can occupy several gigabytes.
+
+---
 
 === Operating System
 
@@ -23,6 +27,8 @@ After first boot, run a full system update before installing Julia:
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+
+---
 
 === Installing Julia
 
@@ -46,24 +52,26 @@ julia --version
 
 ---
 
-`juliaup` allows you to maintain multiple Julia versions and switch between them with 
+`juliaup` allows you to maintain multiple Julia versions and switch between them with
 ```bash
 juliaup default <version>
 ```
 
-==== Alternative: System Package
+// Alternative: System Package
+#info[If you prefer a simpler path without `juliaup`, the Raspberry Pi OS repositories include a Julia package, though it may be an older version:
 
-If you prefer a simpler path without `juliaup`, the Raspberry Pi OS repositories include a Julia package, though it may be an older version:
-
-```bash
-sudo apt install julia
-```
+  ```bash
+  sudo apt install julia
+  ```
+]
 
 ---
 
-=== First Launch and the REPL
+== First Launch and the REPL
 
-Start Julia by typing `julia` in the terminal. You will be greeted by the interactive REPL (Read-Eval-Print Loop). From here you can enter expressions, manage packages, and run scripts.
+#title-slide("Using the Julia REPL", "Interactive Programming and Package Management")
+
+Start Julia by typing `julia` in the terminal. You will be greeted by the interactive REPL _(Read-Eval-Print Loop)_. From here you can enter expressions, manage packages, and run scripts.
 
 Julia has four REPL modes:
 
@@ -74,9 +82,12 @@ Julia has four REPL modes:
 
 ---
 
+
+=== Package Depot and Precompilation
+
 To install a package, enter package mode and type:
 
-```
+```julia
 ] add Plots
 ```
 
@@ -86,8 +97,8 @@ To exit the REPL:
 exit()
 ```
 
----
-
-=== Package Depot and Precompilation
-
 Julia compiles packages on first use. On a Raspberry Pi this can be slow — several minutes for large packages — but subsequent launches are fast. Precompilation happens automatically when you `add` a package or `using` it for the first time. // Use `PackageCompiler.jl` to create a custom system image if startup time is critical for your application.
+
+=== Julia Onramp
+
+#url-block("codes/julia-onramp.ipynb")

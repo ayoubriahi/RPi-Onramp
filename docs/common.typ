@@ -1,4 +1,10 @@
-
+// colour tokens
+#let accent = rgb("#028090")
+#let amber = rgb("#F4A261")
+#let dark = rgb("#1a1a2e")
+#let light = rgb("#f4f4f4")
+#let signal-high = rgb("#02C39A")
+#let signal-low = rgb("#F96167")
 #let light-blue = rgb("#4A4A75")
 #let light-green = rgb("#44AA44")
 #let light-red = rgb("#EF4444")
@@ -9,7 +15,10 @@
 #let light-gray = rgb("#EBEBEB")
 #let off-white = rgb("#F5F5F5")
 #let white = rgb("#FFFFFF")
-
+#let info-color = rgb("#3b82f6")
+#let warning-color = rgb("#f59e0b")
+#let note-color = rgb("#8b5cf6")
+#let important-color = rgb("#ef4444")
 
 #let hl(body) = block(
   fill: rgb("#d7d733"),
@@ -20,11 +29,18 @@
   #body
 ]
 
-// colour tokens
-#let info-color = rgb("#3b82f6")
-#let warning-color = rgb("#f59e0b")
-#let note-color = rgb("#8b5cf6")
-#let important-color = rgb("#ef4444")
+#let title-slide(title, subtitle) = {
+  set page(fill: dark)
+  set text(fill: white)
+  align(horizon + center)[
+    #v(0.4em)
+    #text(size: 40pt, weight: "bold")[#title]
+    #v(0.6em)
+    #line(length: 40%, stroke: 1.5pt + accent)
+    #v(0.6em)
+    #text(size: 16pt, fill: luma(200))[#subtitle]
+  ]
+}
 
 // icon map
 #let _icons = (
@@ -69,3 +85,35 @@
 #let warning(body) = fancy-block("warning", warning-color, body)
 #let note(body) = fancy-block("note", note-color, body)
 #let important(body) = fancy-block("important", important-color, body)
+
+#let bit-label(bits) = {
+  set text(size: 13pt, fill: dark.lighten(30%))
+  bits
+}
+
+#let url-block(url) = block(
+  width: 100%,
+  inset: 12pt,
+  radius: 8pt,
+  stroke: (left: 3pt + rgb("#24292f")),
+  fill: rgb("#f6f8fa"),
+)[
+  #grid(
+    columns: (auto, 1fr),
+    gutter: 10pt,
+    align: horizon,
+    [
+      #box(
+        inset: 6pt,
+        radius: 50%,
+        fill: rgb("#24292f"),
+        text(fill: white, weight: "bold")[</>],
+      )
+    ],
+    [
+      Source code is available at #h(5pt) #text(fill: rgb("#0969da"))[
+        #link("https://github.com/a-mhamdi/RPi-Onramp/blob/main/" + url)[#url]
+      ]
+    ],
+  )
+]

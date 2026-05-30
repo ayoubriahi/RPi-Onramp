@@ -17,6 +17,11 @@
 #show raw: set text(font: "Fira Code", size: 17pt, stylistic-set: 1) // Enable ligatures for code
 #show math.equation: set text(font: "Fira Math", size: 17pt)
 
+#show: codly-init.with()
+#codly(languages: codly-languages)
+
+#set heading(numbering: numbly("{1}.", default: "1.1"))
+
 #show: metropolis-theme.with(
   aspect-ratio: "16-9",
   footer: self => "RPi Onramp | A. Mhamdi",
@@ -29,19 +34,14 @@
   ),
 )
 
-#show: codly-init.with()
-#codly(languages: codly-languages)
-
-#set heading(numbering: numbly("{1}.", default: "1.1"))
-
 #title-slide()
 
 = Outline <touying:hidden>
 #outline(title: none, depth: 1)
 
-// #include "parts/rpi.typ"
-// #include "parts/jl.typ"
-#include "parts/ec.typ"
+#include "parts/rpi.typ"
+#include "parts/jl.typ"
+// #include "parts/ec.typ"
 
 #focus-slide[
   Thank you for your attention

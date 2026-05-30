@@ -1,5 +1,7 @@
 #import "../common.typ": *
+
 = General Overview
+
 ---
 
 #hl[#text(weight: "bold")[Why Use Raspberry Pi]]
@@ -19,18 +21,20 @@ The official operating system is *Raspberry Pi OS* (formerly called Raspbian unt
 
 Before installing any software, it is good practice to refresh the local package index and then apply all available upgrades:
 ```bash
-sudo apt update           # refresh the package list
-sudo apt full-upgrade     # upgrade packages, handling dependency changes
+sudo apt update  # refresh the package list
+sudo apt full-upgrade  # upgrade packages, handling dependency changes
 ```
 
 `full-upgrade` is preferred over `upgrade` because it correctly handles cases where packages need to be added or removed to satisfy updated dependencies.
 
 To install a specific package:
 ```bash
-sudo apt install git      # install git
+sudo apt install git  # install git
 ```
 
 == SSH Setup
+
+#title-slide("SSH", "Secure Shell Configuration")
 
 SSH (Secure Shell) is a cryptographic network protocol for secure remote access to a machine over an unsecured network. On Raspberry Pi OS, the `openssh-server` package is already installed but *disabled by default* for security reasons.
 
@@ -47,8 +51,8 @@ sudo raspi-config
 *Option 2 — systemctl (enable on a running system):*
 
 ```bash
-sudo systemctl enable ssh   # enable SSH to start on boot
-sudo systemctl start ssh    # start the SSH service immediately
+sudo systemctl enable ssh  # enable SSH to start on boot
+sudo systemctl start ssh  # start the SSH service immediately
 ```
 
 *Option 3 — headless setup (before first boot):*
@@ -124,8 +128,8 @@ You will be asked for your Pi password one final time. After this step, the publ
 If `ssh-copy-id` is not available _(e.g. on Windows)_, copy it manually:
 ```bash
 cat ~/.ssh/rpi.pub | ssh <username>@<pi-ip-address> \
-  "mkdir -p ~/.ssh && chmod 700 ~/.ssh && \
-   cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+"mkdir -p ~/.ssh && chmod 700 ~/.ssh && \
+cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 ```
 */
 
@@ -141,9 +145,7 @@ eval "$(ssh-agent -s)"   # start the agent
 ssh-add ~/.ssh/rpi  # load the key (prompts for passphrase once)
 ```
 
----
-
-=== (Optional) Disable password login on the Pi
+=== Disable password login on the Pi
 
 Once key authentication is confirmed to be working, you can disable password logins entirely to harden the Pi against brute-force attacks. Edit the SSH server config:
 ```bash
@@ -160,13 +162,13 @@ Then restart the SSH service:
 sudo systemctl restart ssh
 ```
 
----
-
 #warning[Do not disable password login until you have verified that key
   authentication works in a separate terminal session. Locking yourself out
   would require physical access to the Pi to recover.]
 
 == Git and GitHub
+
+#title-slide("Git and GitHub", "Version Control and Collaboration")
 
 Git is a distributed version control system that tracks changes to files and directories over time. It allows you to commit snapshots of your work, branch off for experiments, and merge changes back together.
 
@@ -225,7 +227,6 @@ sudo apt install lazygit
 ```
 
 Launch it from inside any Git repository by simply running `lazygit`. Press `?` at any time to view the full list of keybindings.
-
 
 #align(center)[
   #image("../images/lazygit.png", width: 70%)
