@@ -1,3 +1,5 @@
+#import "@preview/touying:0.7.3": *
+
 // colour tokens
 #let accent = rgb("#028090")
 #let amber = rgb("#F4A261")

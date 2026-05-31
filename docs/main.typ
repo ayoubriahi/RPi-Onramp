@@ -2,20 +2,15 @@
 #import "@preview/numbly:0.1.0": numbly
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.10": *
-#import "@preview/cetz:0.5.2"
+// #import "@preview/cetz:0.5.2"
 #import "@preview/theorion:0.6.0": *
 
 #import themes.metropolis: *
-#import cosmos.clouds: *
+// #import cosmos.clouds: *
 #show: show-theorion
 
 #show link: underline
 #set par(justify: true)
-
-// Define fonts
-#set text(font: "Fira Sans", weight: "regular", size: 17pt)
-#show raw: set text(font: "Fira Code", size: 17pt, stylistic-set: 1) // Enable ligatures for code
-#show math.equation: set text(font: "Fira Math", size: 17pt)
 
 #show: codly-init.with()
 #codly(languages: codly-languages)
@@ -34,6 +29,11 @@
   ),
 )
 
+// Define fonts
+#set text(font: "Fira Sans", weight: "regular", size: 17pt)
+#show raw: set text(font: "Fira Code", size: 17pt, stylistic-set: 1) // Enable ligatures for code
+#show math.equation: set text(font: "Fira Math", size: 17pt)
+
 #title-slide()
 
 = Outline <touying:hidden>
@@ -41,7 +41,8 @@
 
 #include "parts/rpi.typ"
 #include "parts/jl.typ"
-// #include "parts/ec.typ"
+#include "parts/ec.typ"
+//#include "parts/use-case.typ"
 
 #focus-slide[
   Thank you for your attention

@@ -102,3 +102,18 @@ Julia compiles packages on first use. On a Raspberry Pi this can be slow — sev
 === Julia Onramp
 
 #url-block("codes/julia-onramp.ipynb")
+
+=== Application: Basic Backprop
+
+#grid(
+  columns: (.7fr, auto),
+  gutter: 10pt,
+  [
+    - An implementation of backpropagation for a simple perceptron.
+    - Gradients computation and weights update using Julia's basic operations.
+      #url-block("codes/basic-backprop.jl")
+  ],
+  [
+    #align(center)[#image("../images/basic-backprop.png", height: 80%)]
+  ],
+)

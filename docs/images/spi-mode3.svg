@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   viewBox="0 0 680 420"
+   role="img"
+   style=""
+   version="1.1"
+   id="svg72"
+   sodipodi:docname="spi-mode3.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview72"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1559107"
+     inkscape:cx="298.03341"
+     inkscape:cy="179.51214"
+     inkscape:window-width="1366"
+     inkscape:window-height="768"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg72" />
+  <title
+     style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"
+     id="title1">SPI Mode 3 timing diagram</title>
+  <desc
+     style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"
+     id="desc1">SPI Mode 3 CPOL=1 CPHA=1: clock idles high, data driven on falling edge, sampled on rising edge.</desc>
+  <defs
+     id="defs27">
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M2 1L8 5L2 9"
+         fill="none"
+         stroke="context-stroke"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1" />
+    </marker>
+    <mask
+       id="imagine-text-gaps-c54k3n"
+       maskUnits="userSpaceOnUse">
+      <rect
+         x="0"
+         y="0"
+         width="680"
+         height="420"
+         fill="white"
+         id="rect1" />
+      <rect
+         x="232.375"
+         y="10"
+         width="215.25"
+         height="22"
+         fill="black"
+         rx="2"
+         id="rect2" />
+      <rect
+         x="41.796875"
+         y="50"
+         width="26.200103759765625"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect3" />
+      <rect
+         x="26.625"
+         y="120"
+         width="40.13615417480469"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect4" />
+      <rect
+         x="279.09375"
+         y="82"
+         width="141.85888671875"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect5" />
+      <rect
+         x="26.59375"
+         y="200"
+         width="39.40625"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect6" />
+      <rect
+         x="133.7734375"
+         y="177"
+         width="12.453125"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect7" />
+      <rect
+         x="192.375"
+         y="205"
+         width="15.25"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect8" />
+      <rect
+         x="253.7734375"
+         y="177"
+         width="12.453125"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect9" />
+      <rect
+         x="313.7734375"
+         y="177"
+         width="12.453125"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect10" />
+      <rect
+         x="372.375"
+         y="205"
+         width="15.25"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect11" />
+      <rect
+         x="433.7734375"
+         y="177"
+         width="12.453125"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect12" />
+      <rect
+         x="492.375"
+         y="205"
+         width="15.25"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect13" />
+      <rect
+         x="553.7734375"
+         y="177"
+         width="12.453125"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect14" />
+      <rect
+         x="129.078125"
+         y="230"
+         width="21.84375"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect15" />
+      <rect
+         x="188.8671875"
+         y="230"
+         width="22.440048217773438"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect16" />
+      <rect
+         x="248.8984375"
+         y="230"
+         width="22.4400634765625"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect17" />
+      <rect
+         x="308.6015625"
+         y="230"
+         width="22.796875"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect18" />
+      <rect
+         x="368.9375"
+         y="230"
+         width="22.4400634765625"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect19" />
+      <rect
+         x="428.796875"
+         y="230"
+         width="22.4400634765625"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect20" />
+      <rect
+         x="490.046875"
+         y="230"
+         width="19.90625"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect21" />
+      <rect
+         x="548.6484375"
+         y="230"
+         width="22.703125"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect22" />
+      <rect
+         x="102"
+         y="300"
+         width="123.328125"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect23" />
+      <rect
+         x="302"
+         y="300"
+         width="161"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect24" />
+      <rect
+         x="542"
+         y="300"
+         width="31.7021484375"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect25" />
+      <rect
+         x="66"
+         y="330"
+         width="159.296875"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect26" />
+      <rect
+         x="66"
+         y="348"
+         width="440.703125"
+         height="19"
+         fill="black"
+         rx="2"
+         id="rect27" />
+    </mask>
+  </defs>
+  <!--
+    Mode 3: CPOL=1, CPHA=1
+    Clock idles HIGH. Mirror of Mode 1.
+    Data is DRIVEN on the FALLING edge, SAMPLED on the RISING edge.
+    CS falls at x=80.
+    SCLK falls:  110,170,230,290,350,410,470,530  &#8592; drive next bit
+    SCLK rises:  140,200,260,320,380,440,500,560  &#8592; SAMPLE here
+    bit7 driven @110(first fall), sampled @140(rise)
+    Byte 0xB5 = 1 0 1 1 0 1 0 1
+  -->
+  <text
+     x="340"
+     y="26"
+     text-anchor="middle"
+     style="fill:rgb(250, 249, 245);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text27">SPI Mode 3 — CPOL=1, CPHA=1</text>
+  <!-- CS -->
+  <text
+     x="62"
+     y="64"
+     text-anchor="end"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:end;dominant-baseline:auto;stroke-opacity:1"
+     id="text28">CS̄</text>
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="40,56 80,56 80,76 575,76 575,56 620,56"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline28" />
+  <!-- SCLK: idles HIGH -->
+  <text
+     x="62"
+     y="134"
+     text-anchor="end"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:end;dominant-baseline:auto;stroke-opacity:1"
+     id="text29">SCLK</text>
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="40,114 110,114"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline29" />
+  <!-- 8 pulses: fall@110 rise@140, fall@170 rise@200 ... fall@530 rise@560 -->
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="110,114 110,144 140,144 140,114&#10;            170,114 170,144 200,144 200,114&#10;            230,114 230,144 260,144 260,114&#10;            290,114 290,144 320,144 320,114&#10;            350,114 350,144 380,144 380,114&#10;            410,114 410,144 440,144 440,114&#10;            470,114 470,144 500,144 500,114&#10;            530,114 530,144 560,144 560,114"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline30" />
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="560,114 620,114"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline31" />
+  <!-- Sample arrows on RISING edges: 140,200,260,320,380,440,500,560 -->
+  <text
+     x="350"
+     y="96"
+     text-anchor="middle"
+     fill="#1D9E75"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text31">↑ sample on rising edge</text>
+  <line
+     x1="140"
+     y1="100"
+     x2="140"
+     y2="112"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line31" />
+  <line
+     x1="200"
+     y1="100"
+     x2="200"
+     y2="112"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line32" />
+  <line
+     x1="260"
+     y1="100"
+     x2="260"
+     y2="112"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line33" />
+  <line
+     x1="320"
+     y1="100"
+     x2="320"
+     y2="112"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line34" />
+  <line
+     x1="380"
+     y1="100"
+     x2="380"
+     y2="112"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line35" />
+  <line
+     x1="440"
+     y1="100"
+     x2="440"
+     y2="112"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line36" />
+  <line
+     x1="500"
+     y1="100"
+     x2="500"
+     y2="112"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line37" />
+  <line
+     x1="560"
+     y1="100"
+     x2="560"
+     y2="112"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line38" />
+  <!-- MOSI
+    bit7=1: driven@110(fall), valid 110..170, sampled@140(rise)
+    bit6=0: driven@170(fall), valid 170..230, sampled@200
+    bit5=1: driven@230,       valid 230..290, sampled@260
+    bit4=1: driven@290,       valid 290..350, sampled@320
+    bit3=0: driven@350,       valid 350..410, sampled@380
+    bit2=1: driven@410,       valid 410..470, sampled@440
+    bit1=0: driven@470,       valid 470..530, sampled@500
+    bit0=1: driven@530,       valid 530..590, sampled@560
+  -->
+  <text
+     x="62"
+     y="214"
+     text-anchor="end"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:end;dominant-baseline:auto;stroke-opacity:1"
+     id="text38">MOSI</text>
+  <!-- hi-Z before first fall -->
+  <line
+     x1="40"
+     y1="224"
+     x2="110"
+     y2="224"
+     stroke="var(--s)"
+     stroke-width="1.5"
+     stroke-dasharray="4 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-dasharray:4px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line39" />
+  <!-- bit7=1 high 110..170 -->
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="110,224 110,196 170,196"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline39" />
+  <!-- bit6=0 low 170..230 -->
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="170,196 170,224 230,224"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline40" />
+  <!-- bit5=1 high 230..290 -->
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="230,224 230,196 290,196"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline41" />
+  <!-- bit4=1 high 290..350 -->
+  <line
+     x1="290"
+     y1="196"
+     x2="350"
+     y2="196"
+     stroke="var(--p)"
+     stroke-width="2"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line41" />
+  <!-- bit3=0 low 350..410 -->
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="350,196 350,224 410,224"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline42" />
+  <!-- bit2=1 high 410..470 -->
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="410,224 410,196 470,196"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline43" />
+  <!-- bit1=0 low 470..530 -->
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="470,196 470,224 530,224"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline44" />
+  <!-- bit0=1 high 530..590 -->
+  <polyline
+     fill="none"
+     stroke="var(--p)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     points="530,224 530,196 590,196"
+     mask="url(#imagine-text-gaps-c54k3n)"
+     style="fill:none;stroke:#124549;color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="polyline45" />
+  <!-- hi-Z after -->
+  <line
+     x1="590"
+     y1="196"
+     x2="620"
+     y2="196"
+     stroke="var(--s)"
+     stroke-width="1.5"
+     stroke-dasharray="4 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-dasharray:4px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line45" />
+  <!-- Bit value labels -->
+  <text
+     x="140"
+     y="191"
+     text-anchor="middle"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text45">1</text>
+  <text
+     x="200"
+     y="219"
+     text-anchor="middle"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text46">0</text>
+  <text
+     x="260"
+     y="191"
+     text-anchor="middle"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text47">1</text>
+  <text
+     x="320"
+     y="191"
+     text-anchor="middle"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text48">1</text>
+  <text
+     x="380"
+     y="219"
+     text-anchor="middle"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text49">0</text>
+  <text
+     x="440"
+     y="191"
+     text-anchor="middle"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text50">1</text>
+  <text
+     x="500"
+     y="219"
+     text-anchor="middle"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text51">0</text>
+  <text
+     x="560"
+     y="191"
+     text-anchor="middle"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text52">1</text>
+  <!-- Bit order labels -->
+  <text
+     x="140"
+     y="244"
+     text-anchor="middle"
+     fill="#888780"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text53">b7</text>
+  <text
+     x="200"
+     y="244"
+     text-anchor="middle"
+     fill="#888780"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text54">b6</text>
+  <text
+     x="260"
+     y="244"
+     text-anchor="middle"
+     fill="#888780"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text55">b5</text>
+  <text
+     x="320"
+     y="244"
+     text-anchor="middle"
+     fill="#888780"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text56">b4</text>
+  <text
+     x="380"
+     y="244"
+     text-anchor="middle"
+     fill="#888780"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text57">b3</text>
+  <text
+     x="440"
+     y="244"
+     text-anchor="middle"
+     fill="#888780"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text58">b2</text>
+  <text
+     x="500"
+     y="244"
+     text-anchor="middle"
+     fill="#888780"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text59">b1</text>
+  <text
+     x="560"
+     y="244"
+     text-anchor="middle"
+     fill="#888780"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto;stroke-opacity:1"
+     id="text60">b0</text>
+  <!-- Drive markers on falling edges -->
+  <line
+     x1="110"
+     y1="152"
+     x2="110"
+     y2="188"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line60" />
+  <line
+     x1="170"
+     y1="152"
+     x2="170"
+     y2="188"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line61" />
+  <line
+     x1="230"
+     y1="152"
+     x2="230"
+     y2="188"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line62" />
+  <line
+     x1="290"
+     y1="152"
+     x2="290"
+     y2="188"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line63" />
+  <line
+     x1="350"
+     y1="152"
+     x2="350"
+     y2="188"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line64" />
+  <line
+     x1="410"
+     y1="152"
+     x2="410"
+     y2="188"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line65" />
+  <line
+     x1="470"
+     y1="152"
+     x2="470"
+     y2="188"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line66" />
+  <line
+     x1="530"
+     y1="152"
+     x2="530"
+     y2="188"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line67" />
+  <!-- Legend -->
+  <line
+     x1="70"
+     y1="310"
+     x2="100"
+     y2="310"
+     stroke="#1D9E75"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line68" />
+  <text
+     x="106"
+     y="314"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="text68">Sample (rising edge)</text>
+  <line
+     x1="270"
+     y1="306"
+     x2="300"
+     y2="306"
+     stroke="#BA7517"
+     stroke-width="1"
+     stroke-dasharray="3 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-dasharray:3px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line69" />
+  <text
+     x="306"
+     y="314"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="text69">Drive next bit (falling edge)</text>
+  <line
+     x1="510"
+     y1="306"
+     x2="540"
+     y2="306"
+     stroke="var(--s)"
+     stroke-width="1.5"
+     stroke-dasharray="4 3"
+     style="fill:rgb(0, 0, 0);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1.5px;stroke-dasharray:4px, 3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="line70" />
+  <text
+     x="546"
+     y="314"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="text70">Hi-Z</text>
+  <text
+     x="70"
+     y="344"
+     style="fill:rgb(194, 192, 182);stroke:#124549;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Fira Code;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto;stroke-opacity:1"
+     id="text71">CPOL = 1  →  clock idles high</text>
+  <text
+     x="70"
+     y="362"
+     style="color:#ffffff;font-weight:400;font-size:12px;font-family:'Fira Code';dominant-baseline:auto;text-anchor:start;opacity:1;fill:#c2c0b6;stroke:#124549;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="text72"><tspan
+       sodipodi:role="line"
+       id="tspan72"
+       x="70"
+       y="362">CPHA = 1 → first bit driven on SCLK↓;</tspan><tspan
+       sodipodi:role="line"
+       id="tspan73"
+       x="70"
+       y="377">data sampled on SCLK↑ (second edge)</tspan></text>
+</svg>

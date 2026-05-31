@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   height="100%"
+   viewBox="0 0 600 400"
+   version="1.1"
+   id="svg37"
+   sodipodi:docname="spi-bus.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.963055"
+     inkscape:cx="414.82573"
+     inkscape:cy="285.03045"
+     inkscape:window-width="1346"
+     inkscape:window-height="716"
+     inkscape:window-x="8"
+     inkscape:window-y="40"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg37" />
+  <!-- Definitions for Arrowheads -->
+  <defs
+     id="defs3">
+    <rect
+       x="62.390005"
+       y="70.65856"
+       width="478.07281"
+       height="297.66798"
+       id="rect39" />
+    <marker
+       id="arrow-mosi"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L0,6 L9,3 z"
+         fill="#FB8C00"
+         id="path1" />
+    </marker>
+    <marker
+       id="arrow-miso"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L0,6 L9,3 z"
+         fill="#8E24AA"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrow-ss"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L0,6 L9,3 z"
+         fill="#1E88E5"
+         id="path3" />
+    </marker>
+    <!-- Connection Point Marker (Dot) -->
+    <marker
+       id="dot"
+       markerWidth="6"
+       markerHeight="6"
+       refX="3"
+       refY="3">
+      <circle
+         cx="3"
+         cy="3"
+         r="3"
+         fill="#424242"
+         id="circle3" />
+    </marker>
+  </defs>
+  <!-- Background -->
+  <rect
+     width="100%"
+     height="100%"
+     fill="#fafafa"
+     id="rect3"
+     x="0"
+     y="0"
+     style="display:none" />
+  <rect
+     x="5"
+     y="5"
+     width="590"
+     height="390"
+     fill="none"
+     stroke="#e0e0e0"
+     stroke-width="2"
+     rx="8"
+     id="rect4"
+     style="display:none" />
+  <!-- Title and Description -->
+  <text
+     x="300"
+     y="30"
+     fill="#212121"
+     font-family="Arial, sans-serif"
+     font-size="18px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text4"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Fira Code;-inkscape-font-specification:Fira Code"
+       id="tspan39">SPI Bus Topology</tspan></text>
+  <text
+     x="300"
+     y="48"
+     fill="#424242"
+     font-family="Arial, sans-serif"
+     font-size="12px"
+     text-anchor="middle"
+     id="text5"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code'"
+       id="tspan38">Serial Peripheral Interface</tspan></text>
+  <!-- Power and Ground Rails -->
+  <line
+     x1="50"
+     y1="60"
+     x2="550"
+     y2="60"
+     stroke="#e53935"
+     stroke-width="2"
+     id="line5" />
+  <text
+     x="560"
+     y="65"
+     fill="#e53935"
+     font-family="Arial, sans-serif"
+     font-size="12px"
+     font-weight="bold"
+     id="text6">VCC</text>
+  <text
+     x="548"
+     y="78"
+     fill="#e53935"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     id="text7">(3.3V / 5V)</text>
+  <line
+     x1="49.49519"
+     y1="369.5914"
+     x2="549.49518"
+     y2="369.5914"
+     stroke="#424242"
+     stroke-width="2"
+     id="line7" />
+  <text
+     x="556.46631"
+     y="374.08658"
+     fill="#424242"
+     font-family="Arial, sans-serif"
+     font-size="12px"
+     font-weight="bold"
+     id="text8">GND</text>
+  <!-- Master Device -->
+  <rect
+     x="60"
+     y="90"
+     width="140"
+     height="200"
+     fill="#e3f2fd"
+     stroke="#1e88e5"
+     stroke-width="2"
+     rx="4"
+     id="rect8" />
+  <text
+     x="174.55981"
+     y="141.72894"
+     fill="#43a047"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     id="text12-6">SCK</text>
+  <path
+     d="m 110,90 v 5 h 40 v -5 z"
+     fill="#1e88e5"
+     id="path8" />
+  <line
+     x1="130"
+     y1="60.841564"
+     x2="130"
+     y2="90"
+     stroke="#e53935"
+     stroke-width="2.41489"
+     id="line8" />
+  <line
+     x1="130"
+     y1="290"
+     x2="130"
+     y2="370"
+     stroke="#424242"
+     stroke-width="2"
+     id="line9" />
+  <text
+     x="130"
+     y="120"
+     fill="#212121"
+     font-family="Arial, sans-serif"
+     font-size="16px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text9">Master</text>
+  <text
+     x="120.65474"
+     y="140"
+     fill="#424242"
+     font-family="Arial, sans-serif"
+     font-size="12px"
+     text-anchor="middle"
+     id="text10">(Microcontroller)</text>
+  <circle
+     cx="200"
+     cy="110.59892"
+     r="3"
+     fill="#1e88e5"
+     id="circle10" />
+  <text
+     x="173.66304"
+     y="113.34544"
+     fill="#1e88e5"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     id="text11">SS1</text>
+  <circle
+     cx="200"
+     cy="139.97217"
+     r="3"
+     fill="#43a047"
+     id="circle11" />
+  <circle
+     cx="200"
+     cy="168.93895"
+     r="3"
+     fill="#fb8c00"
+     id="circle12" />
+  <text
+     x="169.75682"
+     y="172.41748"
+     fill="#fb8c00"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     id="text13">MOSI</text>
+  <circle
+     cx="199.68195"
+     cy="200.66084"
+     r="3"
+     fill="#8e24aa"
+     id="circle13" />
+  <text
+     x="170.62338"
+     y="203.99852"
+     fill="#8e24aa"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     id="text14">MISO</text>
+  <circle
+     cx="200"
+     cy="251.27397"
+     r="3"
+     fill="#1e88e5"
+     id="circle14" />
+  <text
+     x="174.28978"
+     y="254.74196"
+     fill="#1e88e5"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     id="text15">SS2</text>
+  <!-- Slave 1 Device -->
+  <rect
+     x="380"
+     y="70"
+     width="140"
+     height="140"
+     fill="#fff3e0"
+     stroke="#fb8c00"
+     stroke-width="2"
+     rx="4"
+     id="rect15" />
+  <path
+     d="m 430,70 v 5 h 40 v -5 z"
+     fill="#fb8c00"
+     id="path15" />
+  <line
+     x1="450.57809"
+     y1="59.594345"
+     x2="450.57809"
+     y2="69.12265"
+     stroke="#e53935"
+     stroke-width="1.59401"
+     id="line15" />
+  <line
+     x1="450"
+     y1="210"
+     x2="450"
+     y2="370"
+     stroke="#424242"
+     stroke-width="2"
+     id="line16" />
+  <text
+     x="450"
+     y="100"
+     fill="#212121"
+     font-family="Arial, sans-serif"
+     font-size="16px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text16"
+     style="-inkscape-font-specification:'Fira Code Bold';font-family:'Fira Code';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code Bold'"
+   id="tspan41">Slave</tspan> 1</text>
+  <text
+     x="450"
+     y="118"
+     fill="#424242"
+     font-family="Arial, sans-serif"
+     font-size="12px"
+     text-anchor="middle"
+     id="text17">(Peripheral A)</text>
+  <circle
+     cx="380"
+     cy="110"
+     r="3"
+     fill="#1e88e5"
+     id="circle17" />
+  <text
+     x="402.04718"
+     y="114"
+     fill="#1e88e5"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="text18">SS</text>
+  <circle
+     cx="380"
+     cy="140"
+     r="3"
+     fill="#43a047"
+     id="circle18" />
+  <text
+     x="408.31454"
+     y="143.37326"
+     fill="#43a047"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="text19">SCK</text>
+  <circle
+     cx="380"
+     cy="170"
+     r="3"
+     fill="#fb8c00"
+     id="circle19" />
+  <text
+     x="413.9552"
+     y="174"
+     fill="#fb8c00"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="text20">MOSI</text>
+  <circle
+     cx="380"
+     cy="200"
+     r="3"
+     fill="#8e24aa"
+     id="circle20" />
+  <text
+     x="413.32846"
+     y="202.74652"
+     fill="#8e24aa"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="text21">MISO</text>
+  <!-- Slave 2 Device -->
+  <rect
+     x="380"
+     y="220"
+     width="140"
+     height="140"
+     fill="#fff3e0"
+     stroke="#fb8c00"
+     stroke-width="2"
+     rx="4"
+     id="rect21" />
+  <path
+     d="m 430,220 v 5 h 40 v -5 z"
+     fill="#fb8c00"
+     id="path21" />
+  <line
+     x1="450"
+     y1="360"
+     x2="450"
+     y2="370"
+     stroke="#424242"
+     stroke-width="2"
+     id="line22" />
+  <text
+     x="450"
+     y="250"
+     fill="#212121"
+     font-family="Arial, sans-serif"
+     font-size="16px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text22"
+     style="-inkscape-font-specification:'Fira Code Bold';font-family:'Fira Code';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal">Slave 2</text>
+  <text
+     x="450"
+     y="268"
+     fill="#424242"
+     font-family="Arial, sans-serif"
+     font-size="12px"
+     text-anchor="middle"
+     id="text23">(Peripheral B)</text>
+  <circle
+     cx="379.56638"
+     cy="250.8941"
+     r="3"
+     fill="#1e88e5"
+     id="circle23" />
+  <text
+     x="340"
+     y="264"
+     fill="#1e88e5"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="text24"
+     style="white-space:pre;inline-size:0"
+     transform="translate(58.971545,-9.1059004)">SS</text>
+  <circle
+     cx="380"
+     cy="290"
+     r="3"
+     fill="#43a047"
+     id="circle24" />
+  <text
+     x="405.72791"
+     y="291.492"
+     fill="#43a047"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="text25">SCK</text>
+  <circle
+     cx="380"
+     cy="320"
+     r="3"
+     fill="#fb8c00"
+     id="circle25" />
+  <text
+     x="411.97998"
+     y="323.13275"
+     fill="#fb8c00"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="text26"
+     inkscape:label="mosi"
+     inkscape:transform-center-x="51.600102">MOSI</text>
+  <circle
+     cx="380"
+     cy="350"
+     r="3"
+     fill="#8e24aa"
+     id="circle26" />
+  <text
+     x="412.41357"
+     y="352.26553"
+     fill="#8e24aa"
+     font-family="Arial, sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="text27">MISO</text>
+  <!-- Bus Lines (Connections) -->
+  <path
+     d="m 199.37326,139.97218 h 146.8663 l 1.25348,0.0278 33.13369,0.62674"
+     fill="none"
+     stroke="#43a047"
+     stroke-width="2"
+     id="path27"
+     sodipodi:nodetypes="cccc" />
+  <path
+     d="m 199.37326,139.37326 86.06655,0.58655 c 23.33046,-1.42927 -12.15763,125.4716 22.05312,150.38182 l 72.19676,-0.2098"
+     fill="none"
+     stroke="#43a047"
+     stroke-width="2"
+     id="path28"
+     sodipodi:nodetypes="cccc" />
+  <text
+     x="266.8663"
+     y="155.78825"
+     fill="#43a047"
+     font-family="Arial, sans-serif"
+     font-size="12px"
+     font-weight="bold"
+     id="text28"
+     style="display:inline" />
+  <path
+     d="m 200.56026,168.72009 h 151.95826 l 0.70547,0.0277 27.43495,1.2486"
+     fill="none"
+     stroke="#fb8c00"
+     stroke-width="2.11778"
+     marker-end="url(#arrow-mosi)"
+     id="path29"
+     sodipodi:nodetypes="cccc" />
+  <path
+     d="m 198.70478,169.1523 71.83412,-0.0191 c -2.32336,30.94633 -7.39371,160.42456 63.59949,152.17499 l 0.86723,-0.0147 44.94626,-0.43361"
+     fill="none"
+     stroke="#fb8c00"
+     stroke-width="2"
+     marker-end="url(#arrow-mosi)"
+     id="path30"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     d="m 381.62323,200.86173 c -53.54703,0.0404 -134.77013,-0.23039 -182.08321,-0.19007"
+     fill="none"
+     stroke="#8e24aa"
+     stroke-width="2.06349"
+     marker-end="url(#arrow-miso)"
+     id="path31"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 379.68821,349.68257 -33.46892,-0.43361 c -6.07392,-54.24299 13.45473,-137.54835 -30.87916,-148.3611 l -115.39481,-0.31119"
+     fill="none"
+     stroke="#8e24aa"
+     stroke-width="2"
+     marker-end="url(#arrow-miso)"
+     id="path32"
+     sodipodi:nodetypes="cccc" />
+  <line
+     x1="200.74509"
+     y1="110.19682"
+     x2="381.67368"
+     y2="110.00048"
+     stroke="#1e88e5"
+     stroke-width="2.03172"
+     marker-end="url(#arrow-ss)"
+     id="line32"
+     inkscape:transform-center-x="-1.5645894"
+     inkscape:transform-center-y="17.759676" />
+  <line
+     x1="200.9012"
+     y1="251.1311"
+     x2="380.94449"
+     y2="251.31439"
+     stroke="#1e88e5"
+     stroke-width="2.0219"
+     marker-end="url(#arrow-ss)"
+     id="line33" />
+  <!-- Additional Connection Points (Dots for branching) -->
+  <!-- Annotations and Notes -->
+  <g
+     id="annotations"
+     transform="translate(-71.69821,1.2384719)">
+    <!-- Full Duplex Indicator -->
+    <rect
+       x="250"
+       y="300"
+       width="100"
+       height="24"
+       fill="#e8eaf6"
+       stroke="#5c6bc0"
+       stroke-width="1"
+       rx="12"
+       id="rect36" />
+    <text
+       x="300"
+       y="316"
+       fill="#283593"
+       font-family="Arial, sans-serif"
+       font-size="11px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="text36">Ful<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Fira Code';-inkscape-font-specification:'Fira Code'"
+   id="tspan37">l</tspan> Duplex</text>
+    <!-- Note about Pull-up Resistors -->
+    <text
+       x="429.72687"
+       y="337.46936"
+       fill="#757575"
+       font-family="Arial, sans-serif"
+       font-size="11px"
+       text-anchor="middle"
+       id="text37"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.64198px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#757575;stroke-width:0.876544"
+       transform="scale(0.87654382,1.1408443)">Note: Standard SPI uses push-pull drivers; pull-up resistors are generally not required (unlike I2C).</text>
+  </g>
+  <text
+     xml:space="preserve"
+     id="text39"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect39);display:inline;opacity:0.6;fill:#000000;stroke:#4c3e41" />
+</svg>

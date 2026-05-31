@@ -38,8 +38,6 @@ sudo apt install git  # install git
 
 SSH (Secure Shell) is a cryptographic network protocol for secure remote access to a machine over an unsecured network. On Raspberry Pi OS, the `openssh-server` package is already installed but *disabled by default* for security reasons.
 
----
-
 There are three common ways to enable it:
 
 *Option 1 — raspi-config (recommended for interactive use):*
@@ -47,6 +45,8 @@ There are three common ways to enable it:
 sudo raspi-config
 # Navigate to: Interface Options → SSH → Enable
 ```
+
+---
 
 *Option 2 — systemctl (enable on a running system):*
 
@@ -59,13 +59,13 @@ sudo systemctl start ssh  # start the SSH service immediately
 
 Create an empty file named `ssh` (no extension) in the `/boot` or `/bootfs` partition of the SD card. The OS will detect it on first boot, enable the SSH service, and delete the file.
 
----
-
 Once SSH is enabled, connect from another machine with:
 ```bash
 ssh <username>@<hostname>.local
 # e.g. ssh pi@raspberrypi.local
 ```
+
+---
 
 #info[Create a new connection profile of type Ethernet on the physical interface enp4s0. The PC will act as a DHCP server and automatically assign an IP address to any device connected via Ethernet (the Pi), while also enabling NAT to share the laptop's internet connection.
   ```bash
@@ -161,6 +161,8 @@ Then restart the SSH service:
 ```bash
 sudo systemctl restart ssh
 ```
+
+---
 
 #warning[Do not disable password login until you have verified that key
   authentication works in a separate terminal session. Locking yourself out

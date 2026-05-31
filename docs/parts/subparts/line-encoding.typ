@@ -1,9 +1,5 @@
 #import "../../common.typ": *
 
----
-
-== Line Encoding
-
 Line encoding is how binary data (0s and 1s) gets mapped to a *physical signal* on a wire — defined by voltage levels and when they change.
 
 #v(0.8em)
@@ -28,30 +24,18 @@ Line encoding is how binary data (0s and 1s) gets mapped to a *physical signal* 
 #v(0.8em)
 Different schemes trade off between *simplicity*, *bandwidth*, and *self-clocking*.
 
-#{
-  set page(fill: dark)
-  set text(fill: white)
-  align(horizon + center)[
-    // #text(size: 14pt, fill: accent)[Serial Communication — Foundations]
-    #v(0.4em)
-    #text(size: 40pt, weight: "bold")[Line Encoding Schemes]
-    #v(0.6em)
-    #line(length: 40%, stroke: 1.5pt + accent)
-    #v(0.6em)
-    #text(size: 16pt, fill: luma(200))[NRZ · NRZI · Manchester · Differential Manchester]
-  ]
-}
+---
 
-#hl[NRZ — Non-Return to Zero]
+#hl[NRZ-L — Non-Return to Zero Level]
 
 #grid(columns: (1.4fr, 1fr), gutter: 1.5em)[
   *Rule:* Level directly represents the bit value.
-  - *High* (+V) → bit *1*
-  - *Low*  (0V) → bit *0*
+  - *High* (+V) → bit *0*
+  - *Low*  (-V) → bit *1*
   - Signal stays at that level for the entire bit period
   - No transition needed — hence "non-return to zero"
 ][
-  #image("../../images/nrz.svg", width: 100%)
+  #image("../../images/nrzl.svg", width: 100%)
 ]
 
 #v(0.5em)
@@ -61,7 +45,7 @@ Different schemes trade off between *simplicity*, *bandwidth*, and *self-clockin
 
 ---
 
-#hl[NRZI — Non-Return to Zero Inverted]
+#hl[NRZ-I — Non-Return to Zero Inverted]
 
 #grid(columns: (1.4fr, 1fr), gutter: 1.5em)[
   *Rule:* A *transition* encodes the bit, not the level.
@@ -126,6 +110,8 @@ Different schemes trade off between *simplicity*, *bandwidth*, and *self-clockin
   *Rule:* Every group of *4 data bits* is replaced by a *5-bit code word* chosen to guarantee enough transitions.
 
   The 5-bit codes are picked so no code has more than *one leading zero* or *two trailing zeros* — ensuring NRZI transitions happen frequently.
+
+  #info[4B/5B is always paired with NRZI — it's a pre-coding step, not a standalone scheme.]
 ][
   #set text(font: "Fira Code", size: 13pt)
   #rect(fill: light, radius: 4pt, inset: 10pt)[
@@ -142,10 +128,6 @@ Different schemes trade off between *simplicity*, *bandwidth*, and *self-clockin
     ```
   ]
 ]
-#v(0.5em)
-// #text(fill: signal-high, weight: "bold")[Advantage:]
-// Solves the long-run problem of NRZI. Only *25% overhead* (vs 100% for Manchester) #text(size: 14pt, fill: luma(100))[(Used in 100BASE-TX Fast Ethernet, FDDI)]
-#info[4B/5B is always paired with NRZI — it's a pre-coding step, not a standalone scheme.]
 
 ---
 
@@ -164,8 +146,8 @@ Different schemes trade off between *simplicity*, *bandwidth*, and *self-clockin
   text(fill: white, weight: "bold")[BW Overhead],
   text(fill: white, weight: "bold")[Used In],
 
-  [NRZ], [✗], [✗], [0%], [RS-232],
-  [NRZI], [Partial], [✗], [0%], [USB, HDLC],
+  [NRZ-L], [✗], [✗], [0%], [RS-232],
+  [NRZ-I], [Partial], [✗], [0%], [USB, HDLC],
   [Manchester], [✓], [✓], [100%], [10BASE-T, IR],
   [Diff. Manchester], [✓], [✓], [100%], [Token Ring],
   [4B/5B + NRZI], [✓], [Partial], [25%], [Fast Ethernet],
