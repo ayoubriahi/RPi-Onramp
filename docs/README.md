@@ -1,6 +1,6 @@
 # Writing with Typst
 
-We propose hereafter a quick guide to help write a document using **Typst**.
+We propose hereafter a quick guide to help you write a document using **Typst**.
 
 ![Typst](typst.svg)
 
@@ -20,11 +20,11 @@ We propose hereafter a quick guide to help write a document using **Typst**.
 * **Inline Code:** Enclose the code within single backticks (\`).
 * **Code Blocks:** Use triple backticks (\`\`\`) followed by the programming language to enable syntax highlighting.
 
-```typ
+````typ
 ```lang
 "Hello from `lang`!"
-`` `
 ```
+````
 
 ## Inserting Objects
 

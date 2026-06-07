@@ -1,6 +1,6 @@
 # MWE EXAMPLES for Hardware I/O
 
-The examples in this project are written as Minimum Working Examples (MWEs), small, self-contained scripts that demonstrate one concept at a time. Each example targets **Debian GNU/Linux 13** (**Trixie**) on the **Raspberry Pi 4** and avoids the `pigpio` daemon, which is no longer available in the **Trixie** apt repositories. Instead, the examples rely on `Gpiod.jl` for GPIO control, `LibSerialPort.jl` for UART communication, and direct Linux `spidev` kernel calls via **Julia**'s built-in `ccall` for SPI. An Arduino Uno is optionally used in several examples as a slave device, illustrating real-world master-slave communication patterns over I2C, SPI, and serial.
+The examples in this project are written as Minimum Working Examples (MWEs), small, self-contained scripts that demonstrate one concept at a time. Each example targets **Debian GNU/Linux 13** (**Trixie**) on the **Raspberry Pi 4** and avoids the `pigpio` daemon, which is no longer available in the **Trixie** apt repositories. Instead, the examples rely on `Gpiod.jl` for GPIO control, `LibSerialPort.jl` for UART communication, and direct Linux `spidev` kernel calls via **Julia**'s built-in `ccall` for SPI. 
 
 ---
 
@@ -26,7 +26,7 @@ The examples in this project are written as Minimum Working Examples (MWEs), sma
 | `libserialport-dev` | System library for LibSerialPort.jl | `sudo apt install libserialport-dev` |
 
 > [!TIP]
-> SPI uses the Linux `spidev` kernel driver via `ccall` — no extra Julia package needed.
+> SPI uses the Linux `spidev` kernel driver via `ccall` — no extra **Julia** package needed.
 
 ---
 
@@ -49,7 +49,7 @@ Uses `Gpiod.jl`. Demonstrates LED output (blink) and button input (poll).
 
 ## 2. I2C — LCD Display
 
-Drives a 16×2 HD44780 LCD with a PCF8574 I2C backpack. Only 4 wires needed. Run `sudo i2cdetect -y 1` to confirm the device address (typically `0x27` or `0x3F`). 
+Drives a 16×2 HD44780 LCD with a PCF8574 I2C backpack. Only 4 wires needed. Run `sudo i2cdetect -y 1` to confirm the device address _(typically `0x27` or `0x3F`)_. 
 
 > [!TIP]
 > Enable via `raspi-config → Interface Options → I2C`.
@@ -67,7 +67,7 @@ Drives a 16×2 HD44780 LCD with a PCF8574 I2C backpack. Only 4 wires needed. Run
 
 ## 3. Serial TX/RX (UART)
 
-Uses `LibSerialPort.jl`. Covers loopback test (TX→RX jumper) and Pi↔Arduino bidirectional communication. Disable Bluetooth first to free up the full UART (`dtoverlay=disable-bt` in `/boot/firmware/config.txt`).
+Uses `LibSerialPort.jl`. Covers loopback test _(TX→RX jumper)_ and Pi↔Arduino bidirectional communication. Disable Bluetooth first to free up the full UART _(`dtoverlay=disable-bt` in `/boot/firmware/config.txt`)_.
 
 **Port names**
 
@@ -92,7 +92,7 @@ Uses `LibSerialPort.jl`. Covers loopback test (TX→RX jumper) and Pi↔Arduino 
 
 ## 4. SPI — Loopback Test
 
-Uses the Linux `spidev` driver directly via Julia `ccall`. No pigpio or extra packages needed. The BCM2711 SPI controller does **not** support software loopback _(a physical MOSI→MISO jumper wire is required.)_
+Uses the Linux `spidev` driver directly via Julia `ccall`. No `pigpio` or extra packages needed. The BCM2711 SPI controller does **not** support software loopback _(a physical MOSI→MISO jumper wire is required.)_
 
 > [!TIP]
 > Enable via `raspi-config → Interface Options → SPI`.
