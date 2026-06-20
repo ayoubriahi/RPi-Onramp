@@ -42,7 +42,7 @@
 #include "parts/rpi.typ"
 #include "parts/jl.typ"
 #include "parts/ec.typ"
-//#include "parts/use-case.typ"
+#include "parts/use-case.typ"
 
 #focus-slide[
   Thank you for your attention
