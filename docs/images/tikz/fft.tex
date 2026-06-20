@@ -1,0 +1,121 @@
+%!TEX program = xelatex
+\documentclass{standalone}
+\usepackage{ifpdf}
+\usepackage{tikz}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, backgrounds, fit, positioning, shapes.geometric, calc, decorations.pathreplacing, decorations.markings}
+
+\usepackage{xltxtra}
+\usepackage{xunicode}
+
+% Fonts
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+
+\usepackage{newtxsf}
+\setmainfont{Fira Sans}
+\usepackage{mathastext}
+%  FFT Butterfly Diagram — N = 8 (radix-2, Cooley–Tukey, decimation-in-time)
+%  Stages: log2(8) = 3
+
+\definecolor{nodecolor}{RGB}{2, 128, 144}      % teal nodes
+\definecolor{stagecolor}{RGB}{234, 244, 246}   % light stage background
+\definecolor{arrowfwd}{RGB}{13, 27, 42}        % dark forward arrows
+\definecolor{arrowbwd}{RGB}{180, 60, 60}       % red twiddle arrows
+
+\begin{document}
+\begin{tikzpicture}[
+  >=Stealth,
+  node distance = 0pt,
+  % signal node style
+  sig/.style = {
+    circle, draw=nodecolor, fill=white,
+    line width=0.8pt, minimum size=7pt, inner sep=0pt
+  },
+  % twiddle factor label style
+  tw/.style  = {font=\tiny, midway, fill=white, inner sep=2pt},
+  % stage label style
+  stg/.style = {font=\bfseries\small, text=nodecolor},
+]
+
+% Horizontal spacing between stages
+\def\dx{2.8}
+% Vertical spacing between signal lines
+\def\dy{-1.0}
+% Number of inputs
+\pgfmathsetmacro{\N}{8}
+\pgfmathsetmacro{\Nm}{int(\N-1)}
+
+% Bit-reversal permutation for N=8: 0->0, 1->4, 2->2, 3->6, 4->1, 5->5, 6->3, 7->7
+\def\bitrev{0, 4, 2, 6, 1, 5, 3, 7}
+
+\foreach \i [count=\row from 0] in \bitrev {
+  % Input label x[bit_rev(row)]
+  \node[left] (in\row) at (0, \row*\dy)
+    {$x[\i]$};
+  % First stage node
+  \node[sig] (s0\row) at (0.7, \row*\dy) {};
+}
+
+% stages 1, 2, 3
+\foreach \stage in {1, 2, 3} {
+  \foreach \row in {0,...,7} {
+    \node[sig] (s\stage\row) at (\stage*\dx, \row*\dy) {};
+  }
+}
+
+\foreach \k in {0,...,7} {
+  \node[right] at (3*\dx + 0.6, \k*\dy)
+    {$X[\k]$};
+}
+
+\foreach \stage/\label in {1/Stage 1, 2/Stage 2, 3/Stage 3} {
+  \begin{scope}[on background layer]
+    \fill[stagecolor, rounded corners=6pt]
+      ({\stage*\dx - 0.55}, {0.55}) rectangle
+      ({\stage*\dx + 0.55}, {7*\dy - 0.55});
+  \end{scope}
+  \node[stg] at (\stage*\dx, 0.85) {\label};
+}
+
+\foreach \row in {0,...,7} {
+  \draw[->, arrowfwd] (in\row) -- (s0\row);
+}
+
+% Stage 1 (span=1)
+\foreach \top/\tw in {0/$W_8^0$, 2/$W_8^0$, 4/$W_8^0$, 6/$W_8^0$} {
+  \pgfmathsetmacro{\bot}{int(\top+1)}
+  \draw[->, arrowfwd] (s0\top) -- (s1\top);
+  \draw[->, arrowfwd] (s0\bot) -- (s1\bot);
+ \draw[->, arrowbwd] (s0\top) -- (s1\bot);
+  \draw[->, arrowbwd] (s0\bot) -- node[tw, pos=0.5] {\tw} (s1\top);
+}
+
+% Stage 2 (span=2)
+\foreach \top/\tw in {0/$W_8^0$, 1/$W_8^2$, 4/$W_8^0$, 5/$W_8^2$} {
+  \pgfmathsetmacro{\bot}{int(\top+2)}
+  \draw[->, arrowfwd] (s1\top) -- (s2\top);
+  \draw[->, arrowfwd] (s1\bot) -- (s2\bot);
+  \draw[->, arrowbwd] (s1\top) -- (s2\bot);
+  \draw[->, arrowbwd] (s1\bot) -- node[tw] {\tw} (s2\top);
+}
+
+% Stage 3 (span=4) 
+\foreach \top/\tw in {0/$W_8^0$, 1/$W_8^1$, 2/$W_8^2$, 3/$W_8^3$} {
+  \pgfmathsetmacro{\bot}{int(\top+4)}
+  \draw[->, arrowfwd] (s2\top) -- (s3\top);
+  \draw[->, arrowfwd] (s2\bot) -- (s3\bot);
+  \draw[->, arrowbwd] (s2\top) -- (s3\bot);
+ \draw[->, arrowbwd] (s2\bot) -- node[tw] {\tw} (s3\top);
+}
+
+% Output
+\foreach \k in {0,...,7} {
+	\draw[->, arrowfwd] (s3\k) -- ++(0.4, 0);
+}
+
+\end{tikzpicture}
+\end{document}

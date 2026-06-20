@@ -1,0 +1,65 @@
+%!TEX program = xelatex
+\documentclass{standalone}
+\usepackage{ifpdf}
+\usepackage{tikz}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, backgrounds, fit, positioning, shapes.geometric, calc, decorations.pathreplacing, decorations.markings}
+
+\usepackage{xltxtra}
+\usepackage{xunicode}
+
+% Fonts
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+
+\usepackage{newtxsf}
+\setmainfont{Fira Sans}
+\usepackage{mathastext}
+%  FFT Butterfly Diagram — N = 8 (radix-2, Cooley–Tukey, decimation-in-time)
+%  Stages: log2(8) = 3
+
+% ── colour palette ────────────────────────────────────────────────────────────
+\definecolor{nodecolor}{RGB}{2, 128, 144}      % teal nodes
+\definecolor{stagecolor}{RGB}{234, 244, 246}   % light stage background
+\definecolor{arrowfwd}{RGB}{13, 27, 42}        % dark forward arrows
+\definecolor{arrowbwd}{RGB}{180, 60, 60}       % red twiddle arrows
+
+\begin{document}
+\begin{tikzpicture}[
+  >=Stealth,
+  node distance = 0pt,
+  % signal node style
+  sig/.style = {
+    circle, draw=nodecolor, fill=white,
+    line width=0.8pt, minimum size=7pt, inner sep=0pt
+  },
+  % twiddle factor label style
+  tw/.style  = {font=\tiny, midway, fill=white, inner sep=2pt},
+  % stage label style
+  stg/.style = {font=\bfseries\tiny, text=nodecolor},
+]
+
+  \node[font=\tiny, fill=yellow, rounded corners] at (0.7, 0.6) {Single butterfly};
+  \node[sig] (ba) at (0, 0)    {};
+  \node[sig] (bb) at (0, -1.1) {};
+  \node[sig] (bc) at (1.4, 0)    {};
+  \node[sig] (bd) at (1.4, -1.1) {};
+  \draw[->, arrowfwd] (ba) -- (bc);
+  \draw[->, arrowfwd] (bb) -- (bd);
+  \draw[->, arrowbwd] (ba) -- (bd);
+  \draw[->, arrowbwd] (bb) -- node[tw, font=\footnotesize] {$W_N^k$} (bc);
+  \node[left,  font=\tiny] at (ba.west) {$a$};
+  \node[left,  font=\tiny] at (bb.west) {$b$};
+  \node[right, font=\tiny] at (bc.east) {$a + W_N^k b$};
+  \node[right, font=\tiny] at (bd.east) {$a - W_N^k b$};
+
+\begin{scope}[yshift=-1.8cm]
+	\draw[->, arrowfwd, line width=0.8pt] (0,0) -- (0.7,0) node[right, font=\tiny] {pass-through};
+	\draw[->, arrowbwd, line width=0.8pt] (0, -0.6) -- (0.7, -0.6) node[right, font=\tiny] {$\times W_N^k$ (twiddle)};
+\end{scope}
+
+\end{tikzpicture}
+\end{document}
